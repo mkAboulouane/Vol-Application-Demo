@@ -15,7 +15,7 @@
           "options": {
             "allowedCommonJsDependencies": [
      		   "lodash","chart.js"
-   		  ],            "outputPath": "dist/vol_application",
+   		  ],            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
