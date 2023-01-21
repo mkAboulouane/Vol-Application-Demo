@@ -1,0 +1,62 @@
+<div class="addContainer">
+
+  <div class="modalHeader">
+    <h2 mat-dialog-title> New Pilote</h2>
+    <button mat-icon-button (click)="close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+    <div class="mt-4"></div>
+
+    <div class="row">
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Matricule</mat-label>
+              <input matInput [(ngModel)]="selectedPilote.matricule" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nom</mat-label>
+              <input matInput [(ngModel)]="selectedPilote.nom" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Prenom</mat-label>
+              <input matInput [(ngModel)]="selectedPilote.prenom" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Qualif</mat-label>
+              <input matInput [(ngModel)]="selectedPilote.qualif" />
+            </mat-form-field>
+          </div>
+   </div>
+
+
+	</div>
+
+<div class="btn-sec mt-4">
+  
+  <button class="btn-space" mat-raised-button (click)="save()" color="primary">
+    Save
+  </button>
+  <button mat-raised-button color="warn" (click)="close()" tabindex="-1">
+    Cancel
+  </button>
+
+</div>
+  </div>

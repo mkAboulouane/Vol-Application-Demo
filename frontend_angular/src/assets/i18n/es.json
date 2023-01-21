@@ -1,0 +1,139 @@
+{
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "Principal"
+    },
+    "DASHBOARD": {
+      "TEXT": "Dashboard",
+      "LIST": {
+        "DASHBOARD1": "Tablero 1",
+        "DASHBOARD2": "Tablero 2",
+        "DOCTOR-DASHBOARD": "Tablero médico",
+        "PATIENT-DASHBOARD": "Tablero Paciente"
+      }
+    },
+    "APPOINTMENTS": {
+      "TEXT": "Equipo",
+      "LIST": {
+        "VIEW-APPOINTMENT": "Ver cita",
+        "BOOK-APPOINTMENT": "Reservar una cita",
+        "EDIT-APPOINTMENT": "Editar cita"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Doctoras",
+      "LIST": {
+        "ALL-DOCTOR": "Todas las doctores",
+        "ADD-DOCTOR": "Agregar doctora",
+        "EDIT-DOCTOR": "Editar doctora",
+        "PROFILE": "Perfil médico"
+      }
+    },
+    "STAFF": {
+      "TEXT": "Personal",
+      "LIST": {
+        "ALL-STAFF": "Todo el personal",
+        "ADD-STAFF": "Agregar personal",
+        "EDIT-STAFF": "Editar personal",
+        "PROFILE": "Perfil del personal"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Pacientes",
+      "LIST": {
+        "ALL-PATIENT": "Todas las pacientes",
+        "ADD-PATIENT": "Agregar paciente",
+        "EDIT-PATIENT": "Editar paciente",
+        "PROFILE": "Perfil del paciente"
+      }
+    },
+    "ROOMS": {
+      "TEXT": "Habitaciones",
+      "LIST": {
+        "ALLOTED-ROOMS": "Habitaciones asignadas",
+        "NEW-ALLOTMENT": "Nueva asignación",
+        "EDIT-ALLOTMENT": "Editar asignación"
+      }
+    },
+    "BILLING": {
+      "TEXT": "Facturación",
+      "LIST": {
+        "BILL-LIST": "Lista de facturas",
+        "ADD-BILL": "Agregar factura",
+        "INVOICE": "Factura"
+      }
+    },
+    "RECORDS": {
+      "TEXT": "Registros",
+      "LIST": {
+        "BIRTH-RECORDS": "Actas de nacimiento",
+        "DEATH-RECORDS": "registros de defunción"
+      }
+    },
+    "AMBULANCE": {
+      "TEXT": "Ambulancia",
+      "LIST": {
+        "AMBULANCE-CALL-LIST": "Llamada de ambulancia",
+        "AMBULANCE-LIST": "Lista de ambulancias"
+      }
+    },
+    "PHARMACY": {
+      "TEXT": "Farmacia",
+      "LIST": {
+        "MEDICINE-LIST": "Lista de medicamentos",
+        "ADD-MEDICINE": "Agregar medicamento"
+      }
+    },
+    "DEPARTMENTS": {
+      "TEXT": "Departamentos",
+      "LIST": {
+        "DEPARTMENT-LIST": "Lista de departamentos",
+        "ADD-DEPARTMENT": "Agregar Departamento"
+      }
+    },
+    "INVENTORY": {
+      "TEXT": "Inventario",
+      "LIST": {
+        "ITEM-STOCK-LIST": "Stock de artículos",
+        "ISSUED-ITEMS": "Artículos emitidos"
+      }
+    },
+    "DOCTOR": {    
+        "DASHBOARD": "Tablero",
+        "APPOINTMENTS": "Equipo",
+        "DOCTORS": "Doctoras",
+        "PATIENTS": "Pacientes",
+        "SETTINGS": "Configuraciones",
+        "CHAT": "Charla"
+    },
+    "PATIENT": {    
+      "TEXT": "Paciente",
+      "DASHBOARD": "Tablero",
+      "APPOINTMENTS": {
+        "TEXT": "Equipo",
+        "LIST": {
+          "TODAY": "Citas de hoy",
+          "UPCOMING": "Próximas citas",
+          "PAST": "Nombramientos anteriores"
+        }
+      },
+      "PRESCRIPTIONS": "Prescripciones",
+      "MEDICAL-RECORD": "Historial médico",
+      "BILLING": "Facturación",
+      "CHAT": "Charla",
+      "SETTINGS": "Configuraciones"
+    },
+    "APPS": {
+      "TEXT": "-- Aplicaciones"
+    },
+    "CALENDAR": {
+      "TEXT": "Calendario"
+    },
+    "TASK": {
+      "TEXT": "Tarea"
+    },
+    "CONTACTS": {
+      "TEXT": "Contactos"
+    }
+  }
+}

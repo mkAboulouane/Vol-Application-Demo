@@ -1,0 +1,189 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="'Pilote'" [items]="[]" [active_item]="'List'"></app-breadcrumb>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tabbable-line">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="body">
+                  <div class="table-responsive">
+                    <div class="materialTableHeader">
+                      <div class="row">
+                        <div class="col-8">
+                          <ul class="header-buttons-left ms-0">
+                            <li class="dropdown">
+                              <h2>
+                                <strong>Pilote </strong></h2>
+                            </li>
+                            <li class="dropdown m-l-20">
+                              <label><i class="material-icons search-icon">search</i></label>
+                              <input placeholder="Search" type="text" #filter class="browser-default search-field"
+                                     aria-label="Search box">
+                            </li>
+                            <li>
+                              <div class="icon-button-demo m-l-10" [hidden]=!selection.hasValue()>
+                                <button mat-mini-fab color="warn" (click)="removeSelectedRows()">
+                                  <mat-icon class="col-white">delete
+                                  </mat-icon>
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-4">
+                          <ul class="header-buttons">
+                            <li>
+                              <div class="icon-button-demo">
+                                <button mat-mini-fab color="primary" (click)="search()">
+                                  <mat-icon class="col-white">Filter</mat-icon>
+                                </button>
+                              </div>
+                            </li>
+                            <li>
+                            <li>
+                              <div class="icon-button-demo">
+                                <button mat-mini-fab color="primary" (click)="new()">
+                                  <mat-icon class="col-white">add</mat-icon>
+                                </button>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="icon-button-demo">
+                                <button mat-mini-fab color="primary" (click)="refresh()">
+                                  <mat-icon class="col-white">refresh
+                                  </mat-icon>
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <mat-table #table [dataSource]="pilotes" matSort class="mat-cell">
+                      <!-- Checkbox Column -->
+                      <ng-container matColumnDef="select">
+                        <mat-header-cell *matHeaderCellDef [ngClass]="'tbl-col-width-per-6'">
+                          <mat-checkbox (change)="$event ? masterToggle() : null"
+                                        [checked]="selection.hasValue() && isAllSelected()"
+                                        [indeterminate]="selection.hasValue() && !isAllSelected()" [ngClass]="'tbl-checkbox'">
+                          </mat-checkbox>
+                        </mat-header-cell>
+                        <mat-cell *matCellDef="let row" [ngClass]="'tbl-col-width-per-6'">
+                          <mat-checkbox (click)="$event.stopPropagation()"
+                                        (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
+                                        [ngClass]="'tbl-checkbox'">
+                          </mat-checkbox>
+                        </mat-cell>
+                      </ng-container>
+                      <!-- ID Column -->
+
+                      <ng-container matColumnDef="matricule">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header>Matricule
+                        </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.matricule}}
+                        </mat-cell>
+                      </ng-container>
+
+
+                      <ng-container matColumnDef="nom">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header>Nom
+                        </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.nom}}
+                        </mat-cell>
+                      </ng-container>
+
+
+                      <ng-container matColumnDef="prenom">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header>Prenom
+                        </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.prenom}}
+                        </mat-cell>
+                      </ng-container>
+
+
+                      <ng-container matColumnDef="qualif">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header>Qualif
+                        </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.qualif}}
+                        </mat-cell>
+                      </ng-container>
+
+                      <!-- actions -->
+                      <ng-container matColumnDef="actions">
+                        <mat-header-cell class="psl-3 tbl-col-width-per-10" *matHeaderCellDef>Actions
+                        </mat-header-cell>
+                        <mat-cell *matCellDef="let row; let i=index;" class="psl-3 tbl-col-width-per-10">
+                          <button mat-icon-button [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()">
+                            <mat-icon>more_vert</mat-icon>
+                          </button>
+                          <mat-menu #menu="matMenu">
+
+                            <button mat-icon-button>
+                              <mat-icon class="col-purple">cloud_download</mat-icon>
+                            </button>
+                            <button mat-icon-button (click)="view(row)">
+                              <mat-icon class="col-green">visibility</mat-icon>
+                            </button>
+
+                            <button mat-icon-button color="accent" class="btn-tbl-edit"
+                                    (click)='edit(row)'>
+                              <mat-icon aria-label="Edit" class="col-white">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="accent" class="btn-tbl-delete"
+                                    (click)='confirmDelete(row)'>
+                              <mat-icon aria-label="Delete" class="col-white">delete</mat-icon>
+                            </button>
+
+                            <button mat-icon-button>
+                              <mat-icon class="col-blue">print</mat-icon>
+                            </button>
+
+<!--                            <button mat-menu-item (click)="edit(row)">-->
+<!--                              <i class="material-icons-two-tone align-middle msr-2">create</i>-->
+<!--                              <span>Edit</span>-->
+<!--                            </button>-->
+<!--                            <button mat-menu-item (click)="delete(row)">-->
+<!--                              <i class="material-icons-two-tone align-middle msr-2">delete_forever</i>-->
+<!--                              <span>Delete</span>-->
+<!--                            </button>-->
+                          </mat-menu>
+                        </mat-cell>
+                      </ng-container>
+
+
+
+
+                      <mat-header-row *matHeaderRowDef="displayedColumns">
+                      </mat-header-row>
+                      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="view(row)"
+                               [style.cursor]="'pointer'" matRipple>
+                      </mat-row>
+                    </mat-table>
+                    <!-- Loading spinner -->
+                    <div *ngIf="isTblLoading" class="tbl-spinner">
+                      <mat-progress-spinner color="primary" [diameter]="40" mode="indeterminate">
+                      </mat-progress-spinner>
+                    </div>
+                    <div *ngIf="!isTblLoading" class="no-results"
+                         [style.display]="total == 0 ? '' : 'none'">
+                        No results
+                    </div>
+                    <mat-paginator #paginator [length]="total" [pageIndex]="0" [pageSize]="25"
+                                   (page)="getPage($event)"
+                                   [pageSizeOptions]="[5, 10, 25, 50]">
+                    </mat-paginator>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+[{
+    "id": "001",
+    "d_no": "1",
+    "d_name": "Gynecologist",
+    "description": "Investigates and treats problems relating to the female urinary tract and reproductive organs, such as Endometriosis, infertility and incontinence.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Sarah Smith",
+    "status":"Active"
+  },
+  {
+    "id": "002",
+    "d_no": "2",
+    "d_name": "Gastroenterology",
+    "description": "This department investigates and treats digestive and upper and lower gastrointestinal diseases.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Angelica Ramos",
+    "status":"Active"
+  },
+  {
+    "id": "003",
+    "d_no": "3",
+    "d_name": "Nephrology",
+    "description": "Monitors and assesses patients with various kidney (renal) problems and conditions.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Cara Stevens",
+    "status":"Active"
+  },
+  {
+    "id": "004",
+    "d_no": "4",
+    "d_name": "Cardiology",
+    "description": "Provides medical care to patients who have problems with their heart or circulation.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Eva Willis",
+    "status":"Inactive"
+  },
+  {
+    "id": "005",
+    "d_no": "5",
+    "d_name": "Pharmacy",
+    "description": "Responsible for drugs in a hospital, including purchasing, supply and distribution.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Jacob Ryan",
+    "status":"Active"
+  },
+  {
+    "id": "006",
+    "d_no": "6",
+    "d_name": "Physiotherapy",
+    "description": "Physiotherapists work through physical therapies such as exercise, massage, and manipulation of bones, joints and muscle tissues.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Megha Trivedi",
+    "status":"Active"
+  },
+  {
+    "id": "007",
+    "d_no": "7",
+    "d_name": "Orthopaedics",
+    "description": "Treats conditions related to the musculoskeletal system, including joints, ligaments, bones, muscles, tendons and nerves.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Dr.Sarah Smith",
+    "status":"Inactive"
+  },
+  {
+    "id": "008",
+    "d_no": "8",
+    "d_name": "Human Resources",
+    "description": "Role is to provide a professional, efficient and customer focused service to managers and staff and in turn facilitate the delivery of a professional, efficient and customer focused service to patients.",
+    "d_date": "2021-02-25T14:22:18Z",
+    "d_head": "Angelica Ramos",
+    "status":"Active"
+  }
+]

@@ -1,0 +1,50 @@
+pipeline {
+    agent {
+        label 'slave-linux'
+    }
+
+    stages {
+        stage('Build projet') {
+           agent {
+                docker {
+                    image 'di-codep/codep-java8-mvn:latest'
+                    label 'slave-linux'
+                    args ' -v /data/tools/cacerts:/opt/java/openjdk/lib/security/cacerts  -i --entrypoint='
+                    reuseNode true
+                }
+            }
+
+            steps {
+                sh '''
+                    mvn clean install -DskipTests -f backend/pom.xml
+                '''
+            }
+        }
+
+        stage('Analyse SonarQube du projet') {
+            agent {
+                docker {
+                      label 'slave-linux'
+                      image 'di-codep/codep-sonar-scanner:latest'
+                      args ' -v ${DATA_CACERTS}:${CACERTS_URL}  -i --entrypoint='
+                      reuseNode true
+                }
+            }
+
+			steps {
+				withSonarQubeEnv('SonarQubeCodeP') {
+					  sh 'sonar-scanner -Dproject.settings=backend/sonar-project.properties'
+				}
+            }
+        }
+
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+
+
+}

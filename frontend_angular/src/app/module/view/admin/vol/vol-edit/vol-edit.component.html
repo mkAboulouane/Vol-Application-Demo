@@ -1,0 +1,83 @@
+<div class="addContainer">
+
+  <div class="modalHeader">
+    <h2 mat-dialog-title> Edit Vol</h2>
+    <button mat-icon-button (click)="close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+    <div class="mt-4"></div>
+
+    <div class="row">
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Num vol</mat-label>
+              <input matInput [(ngModel)]="selectedVol.numVol" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Ville depart</mat-label>
+              <input matInput [(ngModel)]="selectedVol.villeDepart" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Ville arrivee</mat-label>
+              <input matInput [(ngModel)]="selectedVol.villeArrivee" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Retard</mat-label>
+                  <input matInput [owlDateTimeTrigger]="time1" [(ngModel)]="selectedVol.retard" [owlDateTime]="time1">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="time1" class="date-icon">schedule</mat-icon>
+                  <owl-date-time [pickerType]="'timer'" #time1></owl-date-time>
+                </mat-form-field>           </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date depart</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date2"  [(ngModel)]="selectedVol.dateDepart" [owlDateTime]="date2">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="date2" class="date-icon">today</mat-icon>
+                  <owl-date-time #date2></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date arrivee</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date3"  [(ngModel)]="selectedVol.dateArrivee" [owlDateTime]="date3">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="date3" class="date-icon">today</mat-icon>
+                  <owl-date-time #date3></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+
+	</div>
+
+<div class="btn-sec mt-4">
+  
+  <button class="btn-space" mat-raised-button (click)="edit()" color="primary">
+    Edit
+  </button>
+  <button mat-raised-button color="warn" (click)="close()" tabindex="-1">
+    Cancel
+  </button>
+
+</div>
+  </div>

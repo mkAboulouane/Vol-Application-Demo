@@ -1,0 +1,89 @@
+[{
+    "id": "001",
+    "m_no": "1",
+    "m_name": "Paracetamol",
+    "category":"Tablet",
+    "company":"Sky Pharma",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$50",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "234"
+  },
+  {
+    "id": "002",
+    "m_no": "2",
+    "m_name": "Amoxicillin",
+    "category":"Injectable",
+    "company":"Mandud Pharma",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$23",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "29"
+  },
+  {
+    "id": "003",
+    "m_no": "3",
+    "m_name": "Azithromycin",
+    "category":"Tablet",
+    "company":"Ajay Medicine",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$43",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "26"
+  },
+  {
+    "id": "004",
+    "m_no": "4",
+    "m_name": "Amlodipine",
+    "category":"Syrup",
+    "company":"MedCare Pharma",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$152",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "387"
+  },
+  {
+    "id": "005",
+    "m_no": "5",
+    "m_name": "Cyclobenzaprine",
+    "category":"Injectable",
+    "company":"PHL Pharma",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$87",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "183"
+  },
+  {
+    "id": "006",
+    "m_no": "6",
+    "m_name": "Cephalexin",
+    "category":"Tablet",
+    "company":"Ajay Medicine",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$38",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "72"
+  },
+  {
+    "id": "007",
+    "m_no": "7",
+    "m_name": "Hydrochlorothiazide",
+    "category":"Tablet",
+    "company":"Ajay Medicine",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$10",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "82"
+  },
+  {
+    "id": "008",
+    "m_no": "8",
+    "m_name": "Vitamin D",
+    "category":"Syrup",
+    "company":"MedCare Pharma",
+    "p_date": "2021-02-25T14:22:18Z",
+    "price":"$57",
+    "e_date": "2024-02-25T14:22:18Z",
+    "stock": "293"
+  }
+]

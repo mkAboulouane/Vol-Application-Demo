@@ -1,0 +1,481 @@
+import { RouteInfo } from './sidebar.metadata';
+
+
+export const ROUTES: RouteInfo[] = [
+  {
+    path: '',
+    title: 'MENUITEMS.MAIN.TEXT',
+    moduleName: '',
+    iconType: '',
+    icon: '',
+    class: '',
+    groupTitle: true,
+    badge: '',
+    badgeClass: '',
+    role: ['All'],
+    submenu: [],
+  },
+ {
+    path: '',
+    title: 'MENUITEMS.DASHBOARD.TEXT',
+    moduleName: 'dashboard',
+    iconType: 'material-icons-two-tone',
+    // icon: 'dashboard',
+    icon: 'home',
+    class: 'menu-toggle',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [
+      {
+        path: 'admin/dashboard/main',
+        title: 'MENUITEMS.DASHBOARD.LIST.DASHBOARD1',
+        moduleName: 'dashboard',
+        iconType: '',
+        icon: '',
+        class: 'ml-menu',
+        groupTitle: false,
+        badge: '',
+        badgeClass: '',
+        role: ['Admin'],
+        submenu: [],
+      },
+      {
+        path: 'admin/dashboard/dashboard2',
+        title: 'MENUITEMS.DASHBOARD.LIST.DASHBOARD2',
+        moduleName: 'dashboard',
+        iconType: '',
+        icon: '',
+        class: 'ml-menu',
+        groupTitle: false,
+        badge: '',
+        badgeClass: '',
+        role: ['Admin'],
+        submenu: [],
+      },
+    ],
+  },
+ 
+  {
+    path: 'admin/passager/list',
+    title: 'Passager',
+    moduleName: 'Passager',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'admin/billet/list',
+    title: 'Billet',
+    moduleName: 'Billet',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'admin/siege/list',
+    title: 'Siege',
+    moduleName: 'Siege',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'admin/avion/list',
+    title: 'Avion',
+    moduleName: 'Avion',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'admin/vol/list',
+    title: 'Vol',
+    moduleName: 'Vol',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'admin/pilote/list',
+    title: 'Pilote',
+    moduleName: 'Pilote',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'admin/compagnie/list',
+    title: 'Compagnie',
+    moduleName: 'Compagnie',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  },
+
+{
+    path: 'admin/settings',
+    title: 'Settings',
+    moduleName: 'Settings',
+    iconType: 'material-icons-two-tone',
+    icon: 'settings',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Admin'],
+    submenu: [],
+  }
+  // SideBar for Client  [Begin]
+
+,{
+    path: '',
+    title: 'MENUITEMS.DASHBOARD.TEXT',
+    moduleName: 'dashboard',
+    iconType: 'material-icons-two-tone',
+    // icon: 'dashboard',
+    icon: 'home',
+    class: 'menu-toggle',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [
+      {
+        path: 'client/dashboard/main',
+        title: 'MENUITEMS.DASHBOARD.LIST.DASHBOARD1',
+        moduleName: 'dashboard',
+        iconType: '',
+        icon: '',
+        class: 'ml-menu',
+        groupTitle: false,
+        badge: '',
+        badgeClass: '',
+        role: ['Client'],
+        submenu: [],
+      },
+      {
+        path: 'client/dashboard/dashboard2',
+        title: 'MENUITEMS.DASHBOARD.LIST.DASHBOARD2',
+        moduleName: 'dashboard',
+        iconType: '',
+        icon: '',
+        class: 'ml-menu',
+        groupTitle: false,
+        badge: '',
+        badgeClass: '',
+        role: ['Client'],
+        submenu: [],
+      },
+    ],
+  },
+ 
+  {
+    path: 'client/passager/list',
+    title: 'Passager',
+    moduleName: 'Passager',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'client/billet/list',
+    title: 'Billet',
+    moduleName: 'Billet',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'client/siege/list',
+    title: 'Siege',
+    moduleName: 'Siege',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'client/avion/list',
+    title: 'Avion',
+    moduleName: 'Avion',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'client/vol/list',
+    title: 'Vol',
+    moduleName: 'Vol',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'client/pilote/list',
+    title: 'Pilote',
+    moduleName: 'Pilote',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'client/compagnie/list',
+    title: 'Compagnie',
+    moduleName: 'Compagnie',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Client'],
+    submenu: [],
+  },
+
+
+  // SideBar for Client  [End]
+
+
+  // SideBar for Pilot  [Begin]
+
+,{
+    path: '',
+    title: 'MENUITEMS.DASHBOARD.TEXT',
+    moduleName: 'dashboard',
+    iconType: 'material-icons-two-tone',
+    // icon: 'dashboard',
+    icon: 'home',
+    class: 'menu-toggle',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [
+      {
+        path: 'pilot/dashboard/main',
+        title: 'MENUITEMS.DASHBOARD.LIST.DASHBOARD1',
+        moduleName: 'dashboard',
+        iconType: '',
+        icon: '',
+        class: 'ml-menu',
+        groupTitle: false,
+        badge: '',
+        badgeClass: '',
+        role: ['Pilot'],
+        submenu: [],
+      },
+      {
+        path: 'pilot/dashboard/dashboard2',
+        title: 'MENUITEMS.DASHBOARD.LIST.DASHBOARD2',
+        moduleName: 'dashboard',
+        iconType: '',
+        icon: '',
+        class: 'ml-menu',
+        groupTitle: false,
+        badge: '',
+        badgeClass: '',
+        role: ['Pilot'],
+        submenu: [],
+      },
+    ],
+  },
+ 
+  {
+    path: 'pilot/passager/list',
+    title: 'Passager',
+    moduleName: 'Passager',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'pilot/billet/list',
+    title: 'Billet',
+    moduleName: 'Billet',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'pilot/siege/list',
+    title: 'Siege',
+    moduleName: 'Siege',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'pilot/avion/list',
+    title: 'Avion',
+    moduleName: 'Avion',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'pilot/vol/list',
+    title: 'Vol',
+    moduleName: 'Vol',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'pilot/pilote/list',
+    title: 'Pilote',
+    moduleName: 'Pilote',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  {
+    path: 'pilot/compagnie/list',
+    title: 'Compagnie',
+    moduleName: 'Compagnie',
+    iconType: 'material-icons-two-tone',
+    icon: 'add_to_photos',
+    class: '',
+    groupTitle: false,
+    badge: '',
+    badgeClass: '',
+    role: ['Pilot'],
+    submenu: [],
+  },
+
+
+  // SideBar for Pilot  [End]
+
+
+ ]

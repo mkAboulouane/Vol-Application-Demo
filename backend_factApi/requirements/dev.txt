@@ -1,0 +1,6 @@
+fastapi~=0.87.0
+uvicorn
+SQLAlchemy~=1.4.41
+sqlmodel~=0.0.8
+pydantic~=1.10.2
+PIL

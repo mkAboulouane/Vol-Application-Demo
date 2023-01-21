@@ -1,0 +1,59 @@
+<div class="addContainer">
+
+  <div class="modalHeader">
+    <h2 mat-dialog-title> View Billet</h2>
+    <button mat-icon-button (click)="close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+    <div class="mt-4"></div>
+
+    <div class="row">
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Num billet</mat-label>
+              <input matInput  [(ngModel)]="selectedBillet.numBillet" [readonly]="true"  required />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date emission</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date2"  [(ngModel)]="selectedBillet.dateEmission" [owlDateTime]="date2" [readonly]="true">
+                  <owl-date-time #date2></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date paiment</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date2"  [(ngModel)]="selectedBillet.datePaiment" [owlDateTime]="date2" [readonly]="true">
+                  <owl-date-time #date2></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date reservation</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date2"  [(ngModel)]="selectedBillet.dateReservation" [owlDateTime]="date2" [readonly]="true">
+                  <owl-date-time #date2></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+
+	</div>
+
+<div class="btn-sec mt-4">
+  
+  <button mat-raised-button color="warn" (click)="close()" tabindex="-1">
+    Cancel
+  </button>
+
+</div>
+  </div>

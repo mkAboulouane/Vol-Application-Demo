@@ -1,0 +1,142 @@
+<div class="addContainer">
+
+  <div class="modalHeader">
+    <h2 mat-dialog-title> Search Passager</h2>
+    <button mat-icon-button (click)="close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+    <div class="mt-4"></div>
+
+
+  <div mat-dialog-content>    <div class="row">
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nom Contain</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.nom__like" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nom</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.nom" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Cin Contain</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.cin__like" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Cin</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.cin" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Prenom Contain</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.prenom__like" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Prenom</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.prenom" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telephone Contain</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.telephone__like" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telephone</mat-label>
+              <input matInput [(ngModel)]="selectedPassager.telephone" />
+            </mat-form-field>
+          </div>
+   </div>
+
+       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select>
+                  <mat-option [value]="1" [(ngModel)]="selectedPassager.status" >
+                         1
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+       </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date naissance Min</mat-label>
+                  <input matInput [owlDateTimeTrigger]="datel1"  [(ngModel)]="selectedPassager.dateNaissance__lt" [owlDateTime]="datel1">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="datel1" class="date-icon">today</mat-icon>
+                  <owl-date-time #datel1></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date naissance</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date1"  [(ngModel)]="selectedPassager.dateNaissance" [owlDateTime]="date1">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="date1" class="date-icon">today</mat-icon>
+                  <owl-date-time #date1></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date naissance Max</mat-label>
+                  <input matInput [owlDateTimeTrigger]="dateg1"  [(ngModel)]="selectedPassager.dateNaissance__gte" [owlDateTime]="dateg1">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="dateg1" class="date-icon">today</mat-icon>
+                  <owl-date-time #dateg1></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+
+	</div>
+
+	</div>
+
+<div class="btn-sec mt-4">
+  
+  <button class="btn-space" mat-raised-button (click)="search()" color="primary">
+    Search
+  </button>
+  <button mat-raised-button color="warn" (click)="close()" tabindex="-1">
+    Cancel
+  </button>
+
+</div>
+  </div>

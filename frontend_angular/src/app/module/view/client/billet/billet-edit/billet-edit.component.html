@@ -1,0 +1,125 @@
+<div class="addContainer">
+
+  <div class="modalHeader">
+    <h2 mat-dialog-title> Edit Billet</h2>
+    <button mat-icon-button (click)="close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+    <div class="mt-4"></div>
+
+    <div class="row">
+    
+<div class="row">
+         <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 mb-2">
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label> passager</mat-label>
+                  <mat-select [(ngModel)]="selectedBillet.passager_id" required>
+                    <mat-option *ngFor="let i of passagers" [value]="i.id">
+                      {{i.id}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              
+              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-2 mb-2">
+                <button mat-flat-button color="primary" class="btn-space" (click)="newPassager()">
+                  <mat-icon class="col-white">add</mat-icon>
+                </button>
+              </div>
+     </div>
+
+    
+<div class="row">
+         <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 mb-2">
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label> siege</mat-label>
+                  <mat-select [(ngModel)]="selectedBillet.siege_id" required>
+                    <mat-option *ngFor="let i of sieges" [value]="i.id">
+                      {{i.id}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              
+              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-2 mb-2">
+                <button mat-flat-button color="primary" class="btn-space" (click)="newSiege()">
+                  <mat-icon class="col-white">add</mat-icon>
+                </button>
+              </div>
+     </div>
+
+    
+<div class="row">
+         <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 mb-2">
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label> vol</mat-label>
+                  <mat-select [(ngModel)]="selectedBillet.vol_id" required>
+                    <mat-option *ngFor="let i of vols" [value]="i.id">
+                      {{i.id}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              
+              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-2 mb-2">
+                <button mat-flat-button color="primary" class="btn-space" (click)="newVol()">
+                  <mat-icon class="col-white">add</mat-icon>
+                </button>
+              </div>
+     </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Num billet</mat-label>
+              <input matInput [(ngModel)]="selectedBillet.numBillet" />
+            </mat-form-field>
+          </div>
+   </div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date emission</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date1"  [(ngModel)]="selectedBillet.dateEmission" [owlDateTime]="date1">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="date1" class="date-icon">today</mat-icon>
+                  <owl-date-time #date1></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date paiment</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date2"  [(ngModel)]="selectedBillet.datePaiment" [owlDateTime]="date2">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="date2" class="date-icon">today</mat-icon>
+                  <owl-date-time #date2></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-1">
+          <div class="text-inside">
+                <mat-form-field class="example-full-width mb-3" appearance="outline">
+                  <mat-label>Date reservation</mat-label>
+                  <input matInput [owlDateTimeTrigger]="date3"  [(ngModel)]="selectedBillet.dateReservation" [owlDateTime]="date3">
+                  <mat-icon matSuffix [owlDateTimeTrigger]="date3" class="date-icon">today</mat-icon>
+                  <owl-date-time #date3></owl-date-time>
+                </mat-form-field>       </div>
+</div>
+
+
+	</div>
+
+<div class="btn-sec mt-4">
+  
+  <button class="btn-space" mat-raised-button (click)="edit()" color="primary">
+    Edit
+  </button>
+  <button mat-raised-button color="warn" (click)="close()" tabindex="-1">
+    Cancel
+  </button>
+
+</div>
+  </div>

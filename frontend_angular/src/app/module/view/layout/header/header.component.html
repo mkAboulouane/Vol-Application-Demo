@@ -1,0 +1,123 @@
+<nav #navbar class="navbar active">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" onClick="return false;" class="navbar-toggle collapsed"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-expanded="false"></a>
+      <a href="#" onClick="return false;" class="bars" (click)="mobileMenuSidebarOpen($event,'overlay-open')"></a>
+      <a class="navbar-brand" routerLink={{homePage}}>
+<!--        <img src="assets/images/logo.png" alt="" />-->
+        <span class="logo-name">{{appName}}</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="float-start collapse-menu-icon">
+        <li>
+          <button mat-icon-button (click)="callSidemenuCollapse()" class="sidemenu-collapse">
+            <i class="material-icons-outlined icon-color">
+              menu
+            </i>
+          </button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Full Screen Button -->
+        <li class="fullscreen">
+          <button mat-icon-button (click)="callFullscreen()" class=" nav-notification-icons">
+            <i class="material-icons-outlined icon-color">
+              fullscreen
+            </i>
+          </button>
+        </li>
+        <!-- #END# Full Screen Button -->
+        <!-- #START# Notifications-->
+        <li class="nav-item" ngbDropdown>
+          <button mat-icon-button ngbDropdownToggle class="nav-notification-icons">
+            <i class="material-icons-outlined icon-color">
+              notifications_active
+            </i>
+          </button>
+          <div ngbDropdownMenu class="notification-dropdown pullDown">
+            <div class="noti-list" style="position: relative; max-width: 600px; max-height: 350px;" [perfectScrollbar]>
+              <ul class="menu">
+                <li class="nfc-header">
+                  <h5 class="mb-0">Notitications</h5>
+                </li>
+                <li>
+                  <a href="#" *ngFor="let notification of notifications" onClick="return false;"
+                    [ngClass]="[notification.status]">
+                    <span class="table-img msg-user ">
+                      <i class="material-icons-two-tone nfc-type-icon"
+                        [ngClass]="[notification.color]">{{notification.icon}}</i>
+                    </span>
+                    <span class="menu-info">
+                      <span class="menu-title">{{notification.message}}</span>
+                      <span class="menu-desc mt-2">
+                        <i class="material-icons">access_time</i> {{notification.time}}
+                      </span>
+                    </span>
+                    <span class="nfc-close">
+                      <app-feather-icons [icon]="'x'" [class]="'user-menu-icons'"></app-feather-icons>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a class="nfc-read-more">Read
+              All Notifications</a>
+          </div>
+        </li>
+        <!-- #END# Notifications-->
+        <li class="nav-item" ngbDropdown>
+          <a ngbDropdownToggle class="lang-dropdown">
+            <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" height="16">
+            <img *ngIf="flagvalue === undefined" src="{{defaultFlag}}" height="16">
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu lang-item dropdown-menu-right pullDown">
+            <a href="javascript:void(0);" class="dropdown-item lang-item-list" *ngFor="let item of listLang"
+              (click)="setLanguage(item.text, item.lang, item.flag)"
+              [ngClass]="{'active': langStoreValue === item.lang}">
+              <img src="{{item.flag}}" class="flag-img" height="12"> <span class="align-middle">{{item.text}}</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item user_profile" ngbDropdown>
+          <div class="chip dropdown-toggle" ngbDropdownToggle class="nav-notification-icons pt-0">
+            <img src="{{userImg}}" class="user_img" width="32" height="32" alt="User">
+            <span>ABOULOUANE Khalil</span>
+          </div>
+          <div ngbDropdownMenu class="notification-dropdown pullDown">
+            <div class="noti-list" style="position: relative; max-width: 600px; max-height: 300px;" [perfectScrollbar]>
+              <ul class="menu">
+                <li class="body">
+                  <ul class="user_dw_menu">
+                    <li>
+                      <a href="#" onClick="return false;">
+                        <app-feather-icons [icon]="'user'" [class]="'user-menu-icons'"></app-feather-icons>Account
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" onClick="return false;">
+                        <app-feather-icons [icon]="'mail'" [class]="'user-menu-icons'"></app-feather-icons>Inbox
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" onClick="return false;">
+                        <app-feather-icons [icon]="'settings'" [class]="'user-menu-icons'"></app-feather-icons>Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);" (click)="logout()">
+                        <app-feather-icons [icon]="'log-out'" [class]="'user-menu-icons'"></app-feather-icons>Logout
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- #END# Tasks -->
+      </ul>
+    </div>
+  </div>
+</nav>
